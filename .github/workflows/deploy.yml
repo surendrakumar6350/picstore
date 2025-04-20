@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-    deploy:
+  deploy:
     name: Deploy
     runs-on: ubuntu-latest
 
@@ -17,13 +17,19 @@ jobs:
       - name: SSH into EC2, clone repo, and deploy
         run: |
           ssh -i key.pem -o StrictHostKeyChecking=no -tt ubuntu@${{ secrets.S_IP }} << 'EOF'
+            # Remove old app files
             sudo rm -rf /var/www/picstore
 
+            # Clone the latest code from the repository
             git clone https://${{ secrets.GH_PAT }}@github.com/surendrakumar6350/picstore.git /var/www/picstore
+
+            # Set permissions for the app directory
             sudo chown -R www-data:www-data /var/www/picstore
             sudo chmod -R 755 /var/www/picstore
 
+            # Restart Apache to apply changes
             sudo systemctl restart apache2
+
             echo "✅ PHP app deployed successfully"
             exit 0
           EOF
