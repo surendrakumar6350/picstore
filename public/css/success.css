@@ -242,3 +242,37 @@
          margin: 5px 0;
      }
  }
+
+
+ .navbar {
+     background-color: rgba(18, 18, 18, 0.9);
+     backdrop-filter: blur(10px);
+     border-bottom: 1px solid var(--border);
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 1000;
+ }
+
+ .navbar-brand {
+     font-weight: 700;
+     color: var(--text);
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+ }
+
+ .navbar-brand i {
+     color: var(--primary);
+ }
+
+ .navbar-nav .nav-link {
+     color: var(--text-muted);
+     transition: color 0.3s;
+ }
+
+ .navbar-nav .nav-link:hover,
+ .navbar-nav .nav-link.active {
+     color: var(--primary);
+ }
