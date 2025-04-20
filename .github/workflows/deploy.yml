@@ -26,5 +26,4 @@ jobs:
             sudo chmod -R 755 /var/www/picstore
             sudo systemctl restart apache2
             echo "✅ PHP app deployed successfully"
-            exit 0
           EOF
