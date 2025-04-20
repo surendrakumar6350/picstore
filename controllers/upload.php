@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Validate file extension
         if (in_array(strtolower($fileExtension), $allowedExtensions)) {
             // Define the upload directory
-            $uploadDir = __DIR__ . '/../../public/uploads/';
+            $uploadDir = __DIR__ . '/../public/uploads/';
             
             // Create the directory if it doesn't exist
             if (!is_dir($uploadDir)) {

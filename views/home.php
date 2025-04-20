@@ -1,3 +1,10 @@
+<?php
+    if (! defined('APP_RUNNING')) {
+        http_response_code(403);
+        die('Access denied');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +13,8 @@
     <title>PicStore - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../public/css/home.css">
-    <link rel="icon" type="image/png" href="../../public/icon.png">
+    <link rel="stylesheet" href="/public/css/home.css">
+    <link rel="icon" type="image/png" href="/public/icon.png">
 </head>
 <body>
     <!-- Navbar -->
@@ -22,7 +29,7 @@
                     <h1>Welcome to PicStore</h1>
                     <p class="subtitle">Upload, organize, and share your images seamlessly</p>
 
-                    <form action="./app/controllers/upload.php" method="POST" enctype="multipart/form-data">
+                    <form action="./controllers/upload.php" method="POST" enctype="multipart/form-data">
                         <div class="upload-area">
                             <input type="file" name="image" id="image-upload" class="form-control" required multiple>
                             <div class="text-center">
@@ -62,7 +69,7 @@
             <?php
 
                 // Define the uploads directory
-                $uploadsDir = __DIR__ . '/../../public/uploads';
+                $uploadsDir = __DIR__ . '/../public/uploads';
 
                 // Initialize an array to store recent uploads
                 $recentUploads = [];

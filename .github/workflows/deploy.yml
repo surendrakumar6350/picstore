@@ -20,8 +20,10 @@ jobs:
             set -e
             sudo chown -R ubuntu:www-data /var/www
             sudo chmod -R 775 /var/www
+            sudo mv /var/www/picstore/public/uploads /tmp/uploads_backup
             sudo rm -rf /var/www/picstore
             git clone https://${{ secrets.GH_PAT }}@github.com/surendrakumar6350/picstore.git /var/www/picstore
+            sudo mv /tmp/uploads_backup /var/www/picstore/public/uploads
             sudo chown -R www-data:www-data /var/www/picstore
             sudo chmod -R 755 /var/www/picstore
             sudo systemctl restart apache2

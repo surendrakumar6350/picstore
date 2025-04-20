@@ -1,3 +1,4 @@
 <?php
-include './app/views/home.php';
+define('APP_RUNNING', true);
+include './views/home.php';
 ?>

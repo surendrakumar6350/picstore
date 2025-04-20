@@ -13,8 +13,8 @@
     <title>Upload Success</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../public/css/success.css">
-    <link rel="icon" type="image/png" href="../../public/icon.png">
+    <link rel="stylesheet" href="../public/css/success.css">
+    <link rel="icon" type="image/png" href="../public/icon.png">
 </head>
 <body>
     <div class="page-wrapper">
