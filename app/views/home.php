@@ -12,7 +12,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="upload-card text-center">
-                    <h1>Welcome to PicStore</h1>
+                    <h1>Welcome to PicStore What</h1>
                     <p>Upload your images and manage them easily.</p>
                     <form action="./app/controllers/upload.php" method="POST" enctype="multipart/form-data">
                         <div class="mb-3">
